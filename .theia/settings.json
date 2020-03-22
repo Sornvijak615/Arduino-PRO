@@ -1,9 +1,0 @@
-{
-    "cpp.buildConfigurations": [
-        {
-            "name": "",
-            "directory": ""
-        }
-    ],
-    "editor.formatOnSave": true
-}
