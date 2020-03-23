@@ -49,7 +49,6 @@ void loop() {
   delay(a);
   digitalWrite(11, 1);
   delay(a);
-  digitalWrite(11, 0);
   digitalWrite(12, 1);
   delay(a);
   digitalWrite(13, 1);
