@@ -42,5 +42,4 @@ void loop(){
     digitalWrite(12, 1);
     digitalWrite(13, 1);
     delay(b);
-    Serial.println("moomin");
 }

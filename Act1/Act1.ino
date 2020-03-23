@@ -40,5 +40,4 @@ void loop() {
   digitalWrite(12, 0);
   digitalWrite(13, 0);
   delay(500);
-  Serial.println("MOOMiN");
 }
