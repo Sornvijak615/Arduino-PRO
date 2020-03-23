@@ -1,5 +1,4 @@
 void setup() {
-  int count = 0;
   Serial.begin(9600);
   pinMode(2, INPUT_PULLUP);
   pinMode(3, OUTPUT);
@@ -13,12 +12,9 @@ void setup() {
   pinMode(11, OUTPUT);
   pinMode(12, OUTPUT);
   pinMode(13, OUTPUT);
-  if (digitalRead(2) == 0) {
-    count++;
-  }
-  Serial.println(count);
 }
 void loop() {
+  int count = 0;
   if (digitalRead(2) == 0) {
     digitalWrite(3, 1);
     digitalWrite(4, 1);
