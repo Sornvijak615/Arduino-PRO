@@ -1,6 +1,6 @@
 void setup() {
   Serial.begin(9600);
-  pinMode(2, INPUT_PULLUP);
+  pinMode(2, OUTPUT);
   pinMode(3, OUTPUT);
   pinMode(4, OUTPUT);
   pinMode(5, OUTPUT);
@@ -13,18 +13,44 @@ void setup() {
   pinMode(12, OUTPUT);
   pinMode(13, OUTPUT);
 }
-int count = 0;
+int count = 1;
+int p = 2;
 void loop() {
-  for (int i = 0; i < count; i++) {
-  }
-}
-void light_LED() {
-  int p = 2;
-  for (int i = 2; i <= p && i <= 13; i++) {
-    digitalWrite(p, 1);
-    p++;
-    if (p > 13) {
-      break;
+  for (int i = 0; i < count && count <= 10; i++) {
+    for (int j = 1; j < p && j <= 13; j++) {
+      digitalWrite(p, 1);
+      p++;
+      if (p > 13) {
+        break;
+      }
     }
+    delay(count * 100);
+    p = 2;
+    for (int k = 1; k < p && k <= 13; k++) {
+      digitalWrite(p, 0);
+      p++;
+      if (p > 13) {
+        break;
+      }
+    }
+    delay(count * 100);
+    p = 2;
+  }
+  count++;
+  if (count > 10) {
+    digitalWrite(2, 0);
+    digitalWrite(3, 0);
+    digitalWrite(4, 0);
+    digitalWrite(5, 0);
+    digitalWrite(6, 0);
+    digitalWrite(7, 0);
+    digitalWrite(8, 0);
+    digitalWrite(9, 0);
+    digitalWrite(10, 0);
+    digitalWrite(11, 0);
+    digitalWrite(12, 0);
+    digitalWrite(13, 0);
+    delay(2000);
+    count = 1;
   }
 }
