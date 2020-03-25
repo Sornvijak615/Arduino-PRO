@@ -13,8 +13,8 @@ void setup() {
   pinMode(12, OUTPUT);
   pinMode(13, OUTPUT);
 }
+int count = 0;
 void loop() {
-  int count = 0;
   if (digitalRead(2) == 0) {
     digitalWrite(3, 1);
     digitalWrite(4, 1);
@@ -27,6 +27,10 @@ void loop() {
     digitalWrite(11, 1);
     digitalWrite(12, 1);
     digitalWrite(13, 1);
+    if (digitalRead(2) == 1) {
+      count++;
+      Serial.println(count);
+    }
   } else {
     digitalWrite(3, 0);
     digitalWrite(4, 0);
