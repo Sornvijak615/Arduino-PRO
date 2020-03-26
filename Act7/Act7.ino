@@ -16,7 +16,7 @@ void setup() {
 int count = 1;
 int p = 2;
 void loop() {
-  for (int i = 0; i < count && count <= 10; i++) {
+  for (int i = 0; i < count && count <= 100; i++) {
     for (int j = 1; j < p && j <= 13; j++) {
       digitalWrite(p, 1);
       p++;
@@ -24,7 +24,7 @@ void loop() {
         break;
       }
     }
-    delay(count * 100);
+    delay(count * 10);
     p = 2;
     for (int k = 1; k < p && k <= 13; k++) {
       digitalWrite(p, 0);
@@ -33,11 +33,11 @@ void loop() {
         break;
       }
     }
-    delay(count * 100);
+    delay(count * 10);
     p = 2;
   }
   count++;
-  if (count > 10) {
+  if (count > 100) {
     digitalWrite(2, 0);
     digitalWrite(3, 0);
     digitalWrite(4, 0);
