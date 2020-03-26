@@ -20,18 +20,12 @@ void loop() {
     for (int j = 1; j < p && j <= 13; j++) {
       digitalWrite(p, 1);
       p++;
-      if (p > 13) {
-        break;
-      }
     }
     delay(count * 10);
     p = 2;
     for (int k = 1; k < p && k <= 13; k++) {
       digitalWrite(p, 0);
       p++;
-      if (p > 13) {
-        break;
-      }
     }
     delay(count * 10);
     p = 2;
