@@ -14,10 +14,10 @@ void setup() {
   pinMode(13, OUTPUT);
 }
 int Id = 6 + 1 + 0 + 8 + 0 + 5 + 0 + 1 + 6 + 1 + 5;
-int ans;
 void loop() {
-  for (int i = 0; i <= 1000 && i % Id == 0; i++) {
-    Serial.println(i);
-    break;
+  for (int i = 1; i <= 1000; i++) {
+    if (i % Id == 0) {
+      Serial.println(i);
+    }
   }
 }
