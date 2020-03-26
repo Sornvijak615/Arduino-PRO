@@ -22,7 +22,7 @@ void loop() {
     analogWrite(9, x);
     analogWrite(10, x);
     analogWrite(11, x);
-    delay(20);
+    delay(10);
     if (x == 1023) {
       for (x = 1023; x >= 0; x--) {
         analogWrite(3, x);
@@ -31,7 +31,7 @@ void loop() {
         analogWrite(9, x);
         analogWrite(10, x);
         analogWrite(11, x);
-        delay(20);
+        delay(10);
       }
     }
   }
